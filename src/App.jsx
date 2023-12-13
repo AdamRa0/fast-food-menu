@@ -1,3 +1,5 @@
+import "./main.css";
+
 const pizzaData = [
   {
     name: "Focaccia",
@@ -46,22 +48,26 @@ const pizzaData = [
 function Pizza() {
   return (
     <div>
-      <h2>Pizza</h2>
+      <h3>Pizza</h3>
       <p></p>
     </div>
   );
 }
 
 function Header() {
-  return <h1>Fast Food Co</h1>;
+  return (
+    <header className="header">
+      <h1>Fast Food Co</h1>;
+    </header>
+  );
 }
 
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
       <Pizza />
-    </div>
+    </main>
   );
 }
 
@@ -79,7 +85,7 @@ function Footer() {
   // }
 
   return (
-    <footer>
+    <footer className="footer">
       {new Date().toLocaleTimeString()}. We&#39;re currently open.
     </footer>
   );
@@ -87,7 +93,7 @@ function Footer() {
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
